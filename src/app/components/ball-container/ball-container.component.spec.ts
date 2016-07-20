@@ -2,7 +2,7 @@
 
 import { By }           from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
-import { addProviders, async, inject } from '@angular/core/testing';
+import { addProviders, async, inject, describe, it, expect } from '@angular/core/testing';
 import { BallContainerComponent } from './ball-container.component';
 
 describe('Component: BallContainer', () => {
