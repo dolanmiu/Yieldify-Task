@@ -9,10 +9,10 @@ It is automatically deployed to Heroku here.
 > This project has unit tests and uses Travis-CI for automated testing. Check it out [here](https://travis-ci.org/dolanmiu/Yieldify-Task).
 
 ## Technologies
-<img src="https://angular.io/resources/images/logos/angular2/angular.png" width="150">
-<img src="https://avatars1.githubusercontent.com/u/3284117" width="150">
-<img src="https://worldvectorlogo.com/logos/heroku.svg" width="150">
-<img src="https://worldvectorlogo.com/logos/travis-ci-icon.svg" width="150">
+<img src="https://angular.io/resources/images/logos/angular2/angular.png" height="150">
+<img src="https://avatars1.githubusercontent.com/u/3284117" height="150">
+<img src="https://worldvectorlogo.com/logos/heroku.svg" height="150">
+<img src="https://worldvectorlogo.com/logos/travis-ci-icon.svg" height="150">
 
 ## Install and Set up
 1. Pull the repo
