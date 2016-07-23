@@ -1,8 +1,11 @@
 <canvas class="ball-container" #myCanvas height="400"></canvas>
 <div>
-    Speed or slowdown time
-    <input type="range" min="0" max="2" step="0.01" [(ngModel)]="playbackSpeed" />
-    Current speed factor: {{playbackSpeed}}
+    <h2>
+        Time manipulation
+    </h2>
+    <label for="playbackSpeed">Speed or slowdown time</label>
+    <input type="range" class="playbackSpeed" min="0" max="2" step="0.01" [(ngModel)]="playbackSpeed" />
+    <p>Current speed factor: {{playbackSpeed}}</p>
 </div>
 <div>
     <button (mousedown)="rewindTime = true" (mouseup)="rewindTime = false">Hold Button to Rewind time!</button>

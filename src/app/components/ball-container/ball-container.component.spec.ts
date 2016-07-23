@@ -6,8 +6,8 @@ import { addProviders, async, inject, describe, it, expect } from '@angular/core
 import { BallContainerComponent } from './ball-container.component';
 
 describe('Component: BallContainer', () => {
-  it('should create an instance', () => {
-    let component = new BallContainerComponent();
-    expect(component).toBeTruthy();
-  });
+    it('should create an instance', () => {
+        let component = new BallContainerComponent();
+        expect(component).toBeTruthy();
+    });
 });

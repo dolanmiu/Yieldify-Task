@@ -9,5 +9,5 @@ import { BallContainerComponent } from './components/ball-container/ball-contain
     directives: [BallContainerComponent]
 })
 export class AppComponent {
-    title = 'app works!';
+    title = 'Yieldify Task';
 }
