@@ -1,21 +1,21 @@
 import {Ball} from './ball';
-import {PhysicsManager} from './physics-manager';
 
 export class Simulation {
-
+    public canvasWidth: number;
+    public canvasHeight: number;
     private balls: Array<Ball>;
-    private physicsManager: PhysicsManager;
 
-    constructor(private canvasWidth: number, private canvasHeight: number, private instanceLimit: number) {
+    constructor(public instanceLimit: number) {
         this.balls = new Array<Ball>();
-        this.physicsManager = new PhysicsManager();
+        this.canvasWidth = 0;
+        this.canvasHeight = 0;
     }
 
     addBall() {
-        let ball = new Ball(Math.random() * 10 + 1, this.physicsManager.CoeffOfRestitution, this.physicsManager.CurveSteepness, Math.random() * this.canvasWidth, this.canvasHeight);
+        let ball = new Ball(Math.random() * 10 + 1, 4, 0.1, Math.random() * this.canvasWidth, Math.random() * this.canvasHeight);
         this.balls.push(ball);
 
-        if (this.balls.length > this.instanceLimit) {
+        while (this.balls.length > this.instanceLimit) {
             this.balls.shift();
         }
     }

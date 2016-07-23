@@ -6,7 +6,11 @@ export class Ball {
     private fillColor: string;
     private time: number;
 
-    constructor(private radius: number, private coeffOfRestitution: number, private airResistance: number, private maxDistanceX: number, private maxDistanceY: number) {
+    constructor(private radius: number,
+        private coeffOfRestitution: number,
+        private airResistance: number,
+        private maxDistanceX: number,
+        private maxDistanceY: number) {
         this.position = new Vector();
         this.strokeColor = this.getRandomColor();
         this.fillColor = this.getRandomColor();
@@ -37,6 +41,10 @@ export class Ball {
     }
 
     draw(context: CanvasRenderingContext2D): void {
+        if (this.time < 0) {
+            return;
+        }
+
         context.beginPath();
         context.arc(this.position.x, this.position.y, this.radius, 0, 2 * Math.PI);
         context.fillStyle = this.fillColor;

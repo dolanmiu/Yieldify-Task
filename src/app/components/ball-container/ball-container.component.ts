@@ -8,44 +8,48 @@ import {Simulation} from './canvas/simulation';
     styleUrls: ['ball-container.component.css']
 })
 export class BallContainerComponent implements AfterViewInit {
-    rectW: number = 100;
-    rectH: number = 100;
-    rectColor: string = '#FF0000';
     context: CanvasRenderingContext2D;
     lastCalledTime: number;
     simulation: Simulation;
+    rewindTime: boolean;
+    playbackSpeed: number;
 
     @ViewChild('myCanvas') myCanvas;
+
+    constructor() {
+        this.simulation = new Simulation(200);
+        this.lastCalledTime = Date.now();
+        this.rewindTime = false;
+        this.playbackSpeed = 1;
+    }
 
     ngAfterViewInit() {
         let canvas = this.myCanvas.nativeElement;
         this.context = canvas.getContext('2d');
         canvas.width = 1920;
         this.context.transform(1, 0, 0, -1, 0, canvas.height);
-        this.simulation = new Simulation(canvas.width, canvas.height, 20);
-        this.tick();
-
+        this.simulation.canvasWidth = canvas.width;
+        this.simulation.canvasHeight = canvas.height;
         canvas.addEventListener('click', () => {
             this.simulation.addBall();
         });
+        this.tick();
     }
 
     tick() {
         requestAnimationFrame(() => {
             this.tick();
         });
+
         this.context.clearRect(0, 0, this.myCanvas.nativeElement.width, this.myCanvas.nativeElement.height);
-        if (!this.lastCalledTime) {
-            this.lastCalledTime = Date.now();
-            return;
-        }
 
         let delta = (Date.now() - this.lastCalledTime) / 100;
+        delta *= this.playbackSpeed;
+        if (this.rewindTime) {
+            delta = -delta;
+        }
+
         this.simulation.update(this.context, delta);
         this.lastCalledTime = Date.now();
-        //let ctx = this.context;
-        //ctx.clearRect(0, 0, 400, 400);
-        //ctx.fillStyle = this.rectColor;
-        //ctx.fillRect(0, 0, this.rectW, this.rectH);
     }
 }

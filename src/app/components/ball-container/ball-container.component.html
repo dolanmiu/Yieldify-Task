@@ -1,6 +1,13 @@
 <canvas class="ball-container" #myCanvas height="400"></canvas>
 <div>
-  <input type="range" min="1" max="400" [(ngModel)]="rectW" /><br />
-  <input type="range" min="1" max="400" [(ngModel)]="rectH" /><br />
-  <input type="color" [(ngModel)]="rectColor" placeholder="color" value="{{rectColor}}" />
+    Speed or slowdown time
+    <input type="range" min="0" max="2" step="0.01" [(ngModel)]="playbackSpeed" />
+    Current speed factor: {{playbackSpeed}}
+</div>
+<div>
+    <button (mousedown)="rewindTime = true" (mouseup)="rewindTime = false">Hold Button to Rewind time!</button>
+</div>
+<div>
+    <label>Instance Limit (Keep this low if you do not have that much system resources)</label>
+    <input [(ngModel)]="simulation.instanceLimit"> {{simulation.instanceLimit}}
 </div>

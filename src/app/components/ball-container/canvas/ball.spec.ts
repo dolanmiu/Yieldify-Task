@@ -7,7 +7,7 @@ import {Ball} from './ball';
 
 describe('Object: Ball', () => {
     it('should create an instance', () => {
-        //let ball = new Ball();
-        //expect(ball).toBeTruthy();
+        // let ball = new Ball();
+        // expect(ball).toBeTruthy();
     });
 });
