@@ -3,8 +3,8 @@
 YieldifyTask
 ===
 
-> A bouncing ball simulation/web-app task, made in Angular2. It is assigned to me by Yieldify. 
-It is automatically deployed to Heroku here.
+> A bouncing ball simulation/web-app task, made in Angular2. It is assigned to me by Yieldify.
+It is automatically deployed to Heroku [here](https://yieldify-task.herokuapp.com/).
 
 > This project has unit tests and uses Travis-CI for automated testing. Check it out [here](https://travis-ci.org/dolanmiu/Yieldify-Task).
 
@@ -13,35 +13,54 @@ It is automatically deployed to Heroku here.
 <img src="https://avatars1.githubusercontent.com/u/3284117" height="150">
 <img src="https://worldvectorlogo.com/logos/heroku.svg" height="150">
 <img src="https://worldvectorlogo.com/logos/travis-ci-icon.svg" height="150">
+<img src="http://tradesouthwest.com/assets/icons/bootstrap-logo.png" height="150">
+
+### Third Party Libraries
+
+1. Bootstrap
 
 ## Install and Set up
+
 1. Pull the repo
 2. Make sure you have `Node` installed with `npm` in your `PATH`  
 3. Install dependencies `npm install`
 
 ## Serve Locally
+
 Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Build
+
 To build you need `angular-cli`. However, the project is built in the `/dist` folder everytime you serve with `npm start`:
 
-1. Install angular-cli globally `npm install angular-cli -g` 
+1. Install angular-cli globally `npm install angular-cli -g`
 2. Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
 ## Running unit tests
 
 Run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+### Travis CI
+Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub. You can check my Travis CI build here:
+
+[https://travis-ci.org/dolanmiu/Yieldify-Task](https://travis-ci.org/dolanmiu/Yieldify-Task)
+
+
 ## Running end-to-end tests
 
-Run `npm e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
+Run `npm e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `npm start`.
 
 ## Deployments
+
 ### Heroku
+
 This project is automatically deployed to Heroku here:
 
+[https://yieldify-task.herokuapp.com](https://yieldify-task.herokuapp.com/)
+
 ### Deploying to Github Pages
+
 This requires `angular-cli`. Run `ng github-pages:deploy` to deploy to Github Pages.
 
 Made with TLC by Dolan Miu
