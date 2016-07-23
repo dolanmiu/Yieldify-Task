@@ -32,7 +32,9 @@ export class Ball {
         this.position.y = this.maxDistanceY * (Math.abs(Math.sin(this.time) / dampeningFactor));
 
         // Logistic / Sigmoid Curve
-        this.position.x = (1 / (1 + Math.pow(Math.E, -this.airResistance * this.time)) - 0.5) * this.maxDistanceX * 2;
+        let sigmoid = 1 / (1 + Math.pow(Math.E, -this.airResistance * this.time));
+        let normalisedSigmoid = sigmoid - 0.5;
+        this.position.x = normalisedSigmoid * this.maxDistanceX * 2;
     }
 
     addDelta(delta: number) {
