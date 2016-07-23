@@ -38,6 +38,7 @@ const barrels: string[] = [
   'app/shared',
   'app/components/test-component',
   'app/components/ball-container',
+  'app/shared/footer-bar',
   /** @cli-barrel */
 ];
 
