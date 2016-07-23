@@ -26,7 +26,6 @@ export class BallContainerComponent implements AfterViewInit {
     ngAfterViewInit() {
         let canvas = this.myCanvas.nativeElement;
         this.context = canvas.getContext('2d');
-        canvas.width = 1920;
         this.context.transform(1, 0, 0, -1, 0, canvas.height);
         this.simulation.canvasWidth = canvas.width;
         this.simulation.canvasHeight = canvas.height;

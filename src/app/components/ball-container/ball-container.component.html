@@ -1,16 +1,27 @@
-<canvas class="ball-container" #myCanvas height="400"></canvas>
+<canvas class="ball-container" #myCanvas width="1200" height="500"></canvas>
+<h2>
+    Time manipulation
+</h2>
+
 <div>
-    <h2>
-        Time manipulation
-    </h2>
-    <label for="playbackSpeed">Speed or slowdown time</label>
-    <input type="range" class="playbackSpeed" min="0" max="2" step="0.01" [(ngModel)]="playbackSpeed" />
-    <p>Current speed factor: {{playbackSpeed}}</p>
+    <h3>Speed or slowdown time</h3>
+    <input class="form-control" type="range" class="playbackSpeed" min="0" max="2" step="0.01" [(ngModel)]="playbackSpeed" />
+    <p>Current speed factor: <strong>{{playbackSpeed}}</strong></p>
 </div>
+
 <div>
-    <button (mousedown)="rewindTime = true" (mouseup)="rewindTime = false">Hold Button to Rewind time!</button>
+    <h3>Rewind time</h3>
+    <button class="btn  btn-lg" [class.btn-danger]="rewindTime" [class.btn-primary]="!rewindTime" (mousedown)="rewindTime = true" (mouseup)="rewindTime = false">
+        <span *ngIf="!rewindTime">Hold Button to Rewind time!</span>
+        <span *ngIf="rewindTime">Release Button to Resume time!</span>
+    </button>
 </div>
+
+<h3>
+    Performance
+</h3>
+
 <div>
-    <label>Instance Limit (Keep this low if you do not have that much system resources)</label>
-    <input [(ngModel)]="simulation.instanceLimit"> {{simulation.instanceLimit}}
+    <label for="instanceLimit">Instance Limit <small>(Keep this low if you do not have that much system resources)</small></label>
+    <input class="form-control" name="instanceLimit" [(ngModel)]="simulation.instanceLimit">
 </div>

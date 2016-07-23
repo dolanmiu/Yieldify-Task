@@ -6,11 +6,8 @@ export class Ball {
     private fillColor: string;
     private time: number;
 
-    constructor(private radius: number,
-        private coeffOfRestitution: number,
-        private airResistance: number,
-        private maxDistanceX: number,
-        private maxDistanceY: number) {
+    constructor(private radius: number, private coeffOfRestitution: number,
+        private airResistance: number, private maxDistanceX: number, private maxDistanceY: number) {
         this.position = new Vector();
         this.strokeColor = this.getRandomColor();
         this.fillColor = this.getRandomColor();

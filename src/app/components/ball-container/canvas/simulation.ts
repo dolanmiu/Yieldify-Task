@@ -12,7 +12,7 @@ export class Simulation {
     }
 
     addBall() {
-        let ball = new Ball(Math.random() * 10 + 1, 4, 0.1, Math.random() * this.canvasWidth, Math.random() * this.canvasHeight);
+        let ball = new Ball(Math.random() * 60 + 2, 4, 0.1, Math.random() * this.canvasWidth, Math.random() * this.canvasHeight);
         this.balls.push(ball);
 
         while (this.balls.length > this.instanceLimit) {
