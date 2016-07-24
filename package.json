@@ -4,8 +4,8 @@
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
-    "start": "ng serve",
-    "preinstall": "npm i typings -g",
+    "start": "node server.js",
+    "preinstall": "npm i typings -g && npm i angular-cli -g",
     "postinstall": "typings install && ng build -prod",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
