@@ -24,3 +24,8 @@ before_script:
   - ng build
 
 script: karma start config/karma.conf.js --single-run
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: TebH4bXcgWQFL2pji6Otn6sJqz+WZ+Ckf885KtRB5ZdDhYoVs1sLS+4/aVu0A0D2obVqqlBxyL3KOYl71qEQpSdlDsXMvdq9WOnx8+t0ECTKqMxtt2r3mAA/y367F/rRp/XvbaWLFa4YuWX1NzC00iMJfQErQs26AfH7vyGPSdwclbbWt2SAqJn2WVA//7YyJdgXL+jzf4t7mSNRDNVOlr1o2/OeePC3XtyaG6kMTFTv8GkIfQVw5Vbvsu6X4oPuDUmxEr2UlzAEyAVfsL2tv4nqTAl8gFnZNkyYnPYCxVDydXH30PLYicxoqM5/ESj+eJVnAHBYiXS3qM1GHsY9YXsI9RLS3VGgfEAWEX8S80lOjaHd3LC4cNIFmMZxsgyVqGU/r4zbbIhyBmzNBbR1Rl+H9uA1+mbNAuF73JqWfu2SpDwCd33OFs/dm34V7+Xai/Na5ICU45POIoIDQdQYY7fDm0pVJhM/S0yjzMK1HK+VJOUYCFwqYaZ5McxfrrEuT8JXDhjErIKUhL5aMsRLWaTkuZkzNfZ43fjdWoFu4/LERCk6l4kRhYujEJRA+UsYkV2kLnxlJrCCtUp22Lvs28l2Qc3VzrMEJdPYAaGCC4KXnAEoYN0liz6FU3LSiwcEe7qDtK1mLJaaHvdLD+AZKYMOCxqoWr6mvNerg+mHKbY=
