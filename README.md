@@ -7,6 +7,10 @@ YieldifyTask
 It is automatically deployed to Heroku [here](https://yieldify-task.herokuapp.com/).
 
 > This project has unit tests and uses Travis-CI for automated testing. Check it out [here](https://travis-ci.org/dolanmiu/Yieldify-Task).
+Once all the unit tests have passed, it will deploy to the [Heroku](https://yieldify-task.herokuapp.com/) app.
+
+> This App is compatible with desktop browsers and additionally mobiles, as it is all responsive (thanks to bootstrap).
+P.S. If this was a real bouncing ball game, I would've designed this much differently.
 
 ## Technologies
 <img src="https://angular.io/resources/images/logos/angular2/angular.png" height="150">
@@ -41,6 +45,8 @@ To build you need `angular-cli`. However, the project is built in the `/dist` fo
 Run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ### Travis CI
+
+Tests are run automatically with Travis CI.
 Travis CI is a hosted, distributed continuous integration service used to build and test software projects hosted at GitHub. You can check my Travis CI build here:
 
 [https://travis-ci.org/dolanmiu/Yieldify-Task](https://travis-ci.org/dolanmiu/Yieldify-Task)
@@ -57,7 +63,11 @@ Before running the tests make sure you are serving the app via `npm start`.
 
 This project is automatically deployed to Heroku here:
 
-[https://yieldify-task.herokuapp.com](https://yieldify-task.herokuapp.com/)
+[https://yieldify-task.herokuapp.com](https://yieldify-task.herokuapp.com/).
+
+To make this work on Heroku, I had to create a simple Express server to serve the static files.
+It uses a `Procfile`, which launches the tiny Express server `server.js`, which serves the `/dist` folder
+I would not use this in practice, but for this project, Heroku works nicely.
 
 ### Deploying to Github Pages
 
