@@ -48,6 +48,8 @@ export class BallContainerComponent implements AfterViewInit {
     }
 
     private handleTime(deltaCallback: (delta: number) => void): void {
+        // This is a nice time handler which deals with all the time related logic. 
+        // It callsback a lambda which has the time passed since last update.
         let delta = (Date.now() - this.lastCalledTime) / 100;
         delta *= this.playbackSpeed;
         if (this.rewindTime) {

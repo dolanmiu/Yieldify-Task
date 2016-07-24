@@ -1,12 +1,17 @@
 import {Ball} from './ball';
 
 export class Simulation {
+    private _balls: Array<Ball>;
+
     public canvasWidth: number;
     public canvasHeight: number;
-    private balls: Array<Ball>;
+
+    public get balls(): Array<Ball> {
+        return this._balls;
+    }
 
     constructor(public instanceLimit: number) {
-        this.balls = new Array<Ball>();
+        this._balls = new Array<Ball>();
         this.canvasWidth = 0;
         this.canvasHeight = 0;
     }
