@@ -2,31 +2,25 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-  - 'node'
-
+- node
 addons:
 apt:
   sources:
-    - google-chrome
+  - google-chrome
   packages:
-    - google-chrome-stable
-    - google-chrome-beta
-
+  - google-chrome-stable
+  - google-chrome-beta
 before_install:
-  - export CHROME_BIN=chromium-browser
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-
+- export CHROME_BIN=chromium-browser
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
 before_script:
-  - npm install -g angular-cli
-  - npm install -g karma
-  - npm install
-  - ng build
-
+- npm install -g angular-cli
+- npm install -g karma
+- npm install
+- ng build
 script: karma start config/karma.conf.js --single-run
-
 deploy:
-  provider: heroku
+  app: yieldify-task
   api_key:
-    secure: c3y3upaTBsFaO3KnHoIZ4JAf6Y5WJ7CVVyM6H2Z8W8EsVMBmH/EO/ayac9aa/2Da8eE9BbnT2whqnF1x5QRzrxkZa/p55ZDrdq36K/ur2Z79TdLUF7/jVPo+41cDS/QdTPv+1SZ8BPBwvW4C4D7Xsoxt07t/5v9A1xAraS9xqxLqKv1oJ7/JsJ2Y3iPSHSG5IoCuVObgKggno7t7bcnIX6yom5ZfSVZEANPM/iCzfcA5EJscgy+6qMqJ375gQe4amWdJ/YpspeNbbcxz+sTyNy9kmzte8tvQX/NgTCKc/lVMV2RIg5ZVsHKQjpjLrOke/QnebmgmxX3i0ttM2BQWckasV/iIMLeWIePx58v18bIYue4iDnCrkBBs8QQk06U+7W20S/PA0JpALDRS50W5EtzPZmFw/EHAWLuri/3IkS7Ael1rbu7OA6ls0CyJtAjnYvHEOtxe8adWmJC123CEKgOPAtl5553unVPaWq2H1Ff1r11uaPoMwoN3/bOeWy8uwnFS7Nds5ci7p573pmvBP7T14ycAQzIWsBB9jFjqBb7Ei/fXX+BgQmpl2nenh2z04r1ARwQ8cOMnojG2huTxI4b97yo5w839Bv83ViYBn/EEQP9CNfcM0vA3xx0rc1JZHvHdEQr3ilW+Oi+n5SnBnv7hqeguVLQFto3SfBdPhlY=
-    app: yieldify-task
+    secure: mxkh/0kltHHF2RaIbhCy91HiXLa3s8++zVE+FTR2v3a951zg+juCzLmzFg5Kwr18BAf4gAhze+iyui2Ow2wqlaBTTre16Xaf8W6qgOqzHC7nTkSep+a8K/Lqw1bsad4d9VfaQTuAG9xxREEvm7mYU/xAA3gAgZ8iHPWN4JdUA6GD6XhxZzWXQnOh8pe+m2sb8jqb6xbUtQOCkIyoI5ScXfDNBsNAFRokpe8rkXds4lNZ+SWZ6Q8e0u3hNZ+u8ZSMCERRjq0Ado8bhtvct2ts4ygUV6ENoB+5iCdK491s5DGt/Guh6l8VLZ/abXwpQa8E6eAOvHfTnyJOq+sqLvdlaJY7ovDZHL/9s64+q4/Io6yUZ+uOw+XsgvcBNertjapWqUk/3Zq5I9fh02EScuo/tQCf0cQ9n6fEQyYcpv37o5e6KArPmu8or6QmY3KHb+4DqI9X1kIR76L/NFAx5RrirvsF2PxbOLRYeoC0EEkujvo8wHVqXko6d3/R7/f4G1RYHhxWo6OdUrarJF/qjlV0Q4OAzn3k99g2Ub+04lJg151Jd1yKkuAyuT11gbN3ZoD5NiKDW0LO16Bv6qA3pFlpwgciqyau0PLhScFBXpop/aH47k4hU6PzPv5vgMP0Jfyl3yBhSImuJvwaB4Ejl66sphXSCyQtkb19XOZGH3Odb1A=
