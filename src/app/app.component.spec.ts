@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
-import { addProviders, async, inject, describe, beforeEach, it, expect } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {addProviders, async, inject, describe, beforeEach, it, expect} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 
 describe('App: YieldifyTask', () => {
     beforeEach(() => {
