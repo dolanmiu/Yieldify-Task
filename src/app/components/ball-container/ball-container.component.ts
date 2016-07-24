@@ -42,13 +42,18 @@ export class BallContainerComponent implements AfterViewInit {
 
         this.context.clearRect(0, 0, this.myCanvas.nativeElement.width, this.myCanvas.nativeElement.height);
 
+        this.handleTime(delta => {
+            this.simulation.update(this.context, delta);
+        });
+    }
+
+    private handleTime(deltaCallback: (delta: number) => void): void {
         let delta = (Date.now() - this.lastCalledTime) / 100;
         delta *= this.playbackSpeed;
         if (this.rewindTime) {
             delta = -delta;
         }
-
-        this.simulation.update(this.context, delta);
+        deltaCallback(delta);
         this.lastCalledTime = Date.now();
     }
 }
