@@ -18,6 +18,7 @@ P.S. If this was a real bouncing ball game, I would've designed this much differ
 <img src="https://worldvectorlogo.com/logos/heroku.svg" height="150">
 <img src="https://worldvectorlogo.com/logos/travis-ci-icon.svg" height="150">
 <img src="http://tradesouthwest.com/assets/icons/bootstrap-logo.png" height="150">
+<img src="https://strongloop.com/wp-content/uploads/2015/12/nodejs-logo.png" height="150">
 
 ### Third Party Libraries
 
@@ -72,6 +73,11 @@ I would not use this in practice, but for this project, Heroku works nicely.
 ### Deploying to Github Pages
 
 This requires `angular-cli`. Run `ng github-pages:deploy` to deploy to Github Pages.
+
+## How it works
+
+The bouncing balls was made using mathematical simulations located in the `ball.ts` class. If it was a game, I would've used a stateful model.
+I did it by making the position of the ball `(x, y)` as a function against `time`, because it was cool to do fancy time manipulation.
 
 Made with TLC by Dolan Miu
 
